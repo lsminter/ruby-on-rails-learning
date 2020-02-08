@@ -1,27 +1,229 @@
 <html>
   <head>
+
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+
   </head>
 
   <body>
-    <div class="about"> 
-      <img src="me.jpg" class="me" />
-      
-      <h1>Lucas Minter</h1>
-      
-      <h2>SOFTWARE ENGINEER</h2>
-      
-      <hr class="grey"/>
+    <div class="about-container">
+      <div class="about"> 
+        <img src="me.jpg" class="me" />
+        
+        <h1>Lucas Minter</h1>
+        
+        <h2>SOFTWARE ENGINEER</h2>
+        
+        <hr class="grey"/>
 
-      <p class="bio">
-        Everything went great. Worked laparoscopic. Lost half an ounce of blood. In recover now. Will Have a private room.
-        Tonight should be the toughest night. Recovery should take about an hour at the longest. Stitches are on the inside and
-        absorbable. Saturday the dressing will come off but the strips will stay on. Pat dry strips after shower. Strips will
-        fall off in their own. Stitches will dissolve in about a month. Can shower right when she gets home. Appointment in 6
-        weeks to see Diana. Nurse will call on Monday to check in. Call neurologist on Monday.
+        <p class="bio">
+          Everything went great. Worked laparoscopic. Lost half an ounce of blood. In recover now. Will Have a private room.
+          Tonight should be the toughest night. Recovery should take about an hour at the longest. Stitches are on the inside and
+          absorbable. Saturday the dressing will come off but the strips will stay on. Pat dry strips after shower. Strips will
+          fall off in their own. Stitches will dissolve in about a month. Can shower right when she gets home. Appointment in 6
+          weeks to see Diana. Nurse will call on Monday to check in. Call neurologist on Monday.
+        </p>
+      </div>
+    </div>
+    <h3>Code Snippets</h3>
+    <hr class="yellow">
+    
+    <div class="box">
+      <h4> Measurement Conversion Challenge
+      <p>
+        This Ruby program will prompt the user for a value in centimeters and let the user know what the corresponding value is in inches.
+      </p>
+      </h4>
+    </div>
+
+    <div class="box">
+      <pre><code class="language-ruby">
+input = &quot;Input a number in cm to convert to inches: &quot;
+puts input
+cm = gets.chomp.to_i
+val = cm /2.54
+
+puts &quot;#{cm}cm converted to inches is #{val}in.&quot;
+    </code></pre>
+    </div>
+
+    <br class="clear">
+
+    <div class="box">
+      <pre><code class="language-ruby">
+puts 'Enter a number.'
+
+number = gets.to_i
+
+remainder = number % 10
+
+if remainder == 1
+    puts &quot;This is the #{number}st place&quot;
+elsif remainder == 2
+    puts &quot;This is the #{number}nd place&quot;
+elsif remainder == 3
+    puts &quot;This is the #{number}rd place&quot;
+else remainder == 4 || remainder == 5 || remainder == 6 || remainder == 7 || remainder == 8 || remainder == 9 || remainder == 10
+    puts &quot;this is the #{number}th place&quot;
+end
+      </code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Ordinal Challenge
+      <p>
+        This Ruby program will convert a plain number
+        to the ordinal of the number. So for example,
+        if the user enters 2, it will display 2nd, if
+        the user enters 3, it will display 3rd, etc.
+      </p>
+      </h4>
+    </div>
+
+    <br class="clear" />
+    <div class="box">
+      <h4>Foobar
+      <p>
+        This Ruby program is an adaptation of a classic technical
+        interview problem which displays sequences
+        of the Foobar pattern.
+      </p>
+      </h4>
+    </div>
+    
+    <div class="box">
+      <pre><code class="language-ruby">
+puts &quot;How many items would you like to see?&quot;
+  user_input = gets.to_i
+
+  def foobar(user_input)
+    1.upto(user_input) do |n|
+    div_by_3 = n % 3
+    div_by_5 = n % 5
+    div_by_15 = n % 15
+    any_num = n
+
+      if div_by_3 == 0
+        puts &quot;foo&quot;
+      elsif div_by_5 == 0
+        puts &quot;bar&quot;
+      elsif div_by_15 == 0 
+        puts &quot;foobar&quot;
+      else 
+        puts any_num
+      end
+    end
+  end
+
+  foobar(user_input)
+    </code></pre>
+    </div>
+    
+    <br class="clear" />
+    
+    <h3>Web Apps</h3>
+    <hr class="yellow" />
+
+    <div class="box">
+      <h4>Quote Generator</h4>
+      <img src="splurty.png" class="full-width"/>
+      <p>
+        A database-powered quote generator with a mobile-first
+        design, using the Ruby on Rails framework, HTML, and CSS.
+        Uses Git and GitHub for version control, and launched
+        on Heroku.
+      </p>
+    </div>
+
+    <div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+    
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+
+    <br class="clear" />
+    <h3>Skills &amp; Tools</h3>
+    <hr class="yellow" />
+    <p class="skills-and-tools">
+      Lucas has developed proficiency and expertise
+      in the following programming languages and
+      comfort with the following tools.
+    </p>
+
+    <div class="icons">
+      <img src="github.png" class="icon" />
+      <img src="rubocop.png" class="icon" />
+      <img src="trello.png" class="icon" />
+      <img src="slack.png" class="icon" />
+      <img src="codeship.png" class="icon" />
+    
+      <br class="clear" />
+      <img src="skills.png" class="icon" />
+    </div>
+
+    <div class="contact-me">
+      <h3 class="contact-headline">Contact</h3>
+      <hr class="yellow" />
+      <p class="contact-info">
+        Currently entertaining new opportunities.
+        Please get in touch via email:
+      </p>
+
+      <p>
+        <a href="mailto:my@email.com" class="contact-link">
+          my@email.com
+        </a>
       </p>
     </div>
   </body>
-
 </html>
